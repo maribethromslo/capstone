@@ -7,7 +7,7 @@ menu?.addEventListener("click", () => {
   menu.setAttribute("aria-expanded", open);
   nav.classList.toggle("open", open);
 });
-nav.querySelectorAll("a").forEach((a) =>
+nav?.querySelectorAll("a").forEach((a) =>
   a.addEventListener("click", () => {
     nav.classList.remove("open");
     menu?.setAttribute("aria-expanded", "false");
