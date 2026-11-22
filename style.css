@@ -960,3 +960,13 @@ header > .nav-cta { flex: 0 0 auto; white-space: nowrap; }
 .hero-carousel > .carousel-dots { justify-content: center; margin-top: 2px; }
 .hero-copy h1.hero-statement { max-width: none; }
 @media (max-width: 500px) { .carousel-arrow-controls { gap: 8px; } .carousel-arrow-controls .carousel-caption { font-size: .8125rem; } }
+
+/* The why: a record of care alongside recognition of lived experience. */
+.why-comparison { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; padding-top: 12px; }
+.why-comparison figure { min-width: 0; margin: 0; }
+.why-comparison img { display: block; width: 100%; height: auto; aspect-ratio: 1672 / 941; object-fit: contain; background: #FAF7F0; }
+.why-comparison figcaption { padding: 23px 0 0; }
+.why-comparison figcaption .eyebrow { display: block; margin-bottom: 10px; }
+.why-comparison figcaption h3 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; line-height: 1.2; margin-bottom: 12px; }
+.why-comparison figcaption p { max-width: 48ch; font-size: 1rem; line-height: 1.6; }
+@media (max-width: 700px) { .why-comparison { grid-template-columns: 1fr; gap: 36px; } }
