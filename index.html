@@ -32,12 +32,22 @@
           <a class="button dark" href="#why">Explore the project ↓</a>
           <div class="meta">Brand identity / Print / Experience design</div>
         </div>
-        <div class="hero-art">
-          <div class="orbit">A FIELD GUIDE FOR<br />THE UNEXPECTED</div>
-          <img
-            src="assets/ownership.webp"
-            alt="Badges of Honor field journal ownership page with mountains, trees, and a golden sun"
-          /><span class="caption">FIELD JOURNAL · DESIGN EXPLORATION</span>
+        <div class="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Badges of Honor project highlights" tabindex="0">
+          <div class="carousel-stage">
+            <figure class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 3: Badge collection"><img src="assets/carousel-01.png" width="1920" height="1080" alt="Collection of embroidered badge concepts celebrating medical milestones and lived experiences" fetchpriority="high" /></figure>
+            <figure class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 3: Field guide journal" hidden><img src="assets/carousel-02.png" width="1920" height="1080" alt="Badges of Honor field guide cover and getting to know me journal spread" loading="lazy" /></figure>
+            <figure class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 3: Companion website" hidden><img src="assets/carousel-03.png" width="1920" height="1080" alt="Badges of Honor companion shop website concept with patch-ready clothing and accessories" loading="lazy" /></figure>
+          </div>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-prev" aria-label="Previous image">Previous</button>
+            <div class="carousel-dots" aria-label="Choose image">
+              <button type="button" data-slide="0" aria-label="Show badge collection" aria-current="true"></button>
+              <button type="button" data-slide="1" aria-label="Show field guide journal" aria-current="false"></button>
+              <button type="button" data-slide="2" aria-label="Show companion website" aria-current="false"></button>
+            </div>
+            <button type="button" class="carousel-next" aria-label="Next image">Next</button>
+          </div>
+          <p class="carousel-caption" aria-live="polite" aria-atomic="true">Badge collection · 1 of 3</p>
         </div>
       </section>
       <section id="why" class="why">

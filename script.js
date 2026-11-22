@@ -80,3 +80,27 @@ modal.addEventListener("click", (e) => {
 document
   .querySelector("#print")
   .addEventListener("click", () => window.print());
+
+// Manual navigation gives visitors time to explore each detailed project image.
+const heroCarousel = document.querySelector('.hero-carousel');
+if (heroCarousel) {
+  const slides = [...heroCarousel.querySelectorAll('.carousel-slide')];
+  const dots = [...heroCarousel.querySelectorAll('[data-slide]')];
+  const captions = ['Badge collection', 'Field guide journal', 'Companion website'];
+  let currentSlide = 0;
+  function showSlide(index) {
+    currentSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => { slide.hidden = i !== currentSlide; });
+    dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === currentSlide)));
+    heroCarousel.querySelector('.carousel-caption').textContent = `${captions[currentSlide]} · ${currentSlide + 1} of ${slides.length}`;
+  }
+  heroCarousel.querySelector('.carousel-prev').addEventListener('click', () => showSlide(currentSlide - 1));
+  heroCarousel.querySelector('.carousel-next').addEventListener('click', () => showSlide(currentSlide + 1));
+  dots.forEach(dot => dot.addEventListener('click', () => showSlide(Number(dot.dataset.slide))));
+  heroCarousel.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showSlide(currentSlide + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+}
