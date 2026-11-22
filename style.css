@@ -884,3 +884,35 @@ dialog p {
     padding: 20px;
   }
 }
+
+/* Supplied brand wordmark and directional arrow artwork. */
+header .brand { flex-shrink: 0; }
+.brand-logo { display: block; width: 190px; height: auto; }
+@media (max-width: 650px) { .brand-logo { width: 155px; } }
+
+/* Keep the header logo at navigation scale, including before other styles load. */
+header .brand { flex: 0 0 auto; max-width: 190px; }
+header .brand img.brand-logo { width: 190px; max-width: 100%; height: auto; max-height: 64px; object-fit: contain; }
+header nav { min-width: 0; }
+header .nav-cta { flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 1100px) and (min-width: 651px) { header { gap: 20px; padding-inline: 3vw; } header nav { gap: 14px; } header .nav-cta { display: none; } }
+@media (max-width: 650px) { header .brand { max-width: 155px; } header .brand img.brand-logo { width: 155px; } }
+
+/* Approved brand identity specimens and palettes. */
+.brand-identity .intro { max-width: 760px; }
+.identity-lockup { display: grid; grid-template-columns: 1fr 1.2fr; gap: 45px; align-items: center; margin-top: 40px; }
+.identity-lockup h3, .brand-palette-section h3, .brand-type-section h3 { margin-bottom: 12px; font-size: 1.4rem; }
+.identity-logo-panel { background: #FAF7F0; border: 1px solid var(--line); padding: 35px; }
+.identity-logo { display: block; width: 100%; height: auto; }
+.brand-palette-section, .brand-type-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+.brand-palette { display: grid; list-style: none; padding: 0; margin: 28px 0 0; gap: 28px 20px; }
+.primary-palette { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.supporting-palette { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.brand-palette li { min-width: 0; text-align: center; }
+.color-chip { display: block; aspect-ratio: 1; width: 75%; max-width: 125px; margin: 0 auto 14px; border-radius: 50%; border: 1px solid #0002; }
+.brand-palette strong { display: block; font-size: .875rem; font-weight: 600; line-height: 1.35; }
+.brand-palette code { display: block; font-size: .875rem; margin-top: 5px; }
+.brand-type-board { max-width: 854px; background: white; margin-top: 26px; }
+.brand-type-board img { display: block; width: 100%; height: auto; }
+@media (max-width: 800px) { .supporting-palette { grid-template-columns: repeat(4, minmax(0, 1fr)); } .identity-lockup { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 500px) { .primary-palette, .supporting-palette { grid-template-columns: repeat(2, minmax(0, 1fr)); } .identity-logo-panel { padding: 25px; } }

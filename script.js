@@ -22,7 +22,7 @@ const notes = {
   brand: [
     "Brand direction",
     "The intended brand typefaces are Zesty Spirit for headlines, National Park Medium for body copy, and Alchosti Regular for display features. This first website uses system-font fallbacks until licensed web-font files are supplied.",
-    "The palette shown here is sampled as a working direction from the journal artwork. Final brand color values and original badge artwork can replace these during the next iteration.",
+    "The primary palette is Evergreen, Moss, Golden Hour, Trail Map, and Pine Bark. Fourteen supporting colors give individual badges character within the collection.",
   ],
   feedback: [
     "What the care team helped clarify",
