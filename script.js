@@ -2,7 +2,7 @@ const menu = document.querySelector(".menu"),
   nav = document.querySelector("nav"),
   modal = document.querySelector("#modal"),
   content = document.querySelector("#modal-content");
-menu.addEventListener("click", () => {
+menu?.addEventListener("click", () => {
   const open = menu.getAttribute("aria-expanded") !== "true";
   menu.setAttribute("aria-expanded", open);
   nav.classList.toggle("open", open);
@@ -10,7 +10,7 @@ menu.addEventListener("click", () => {
 nav.querySelectorAll("a").forEach((a) =>
   a.addEventListener("click", () => {
     nav.classList.remove("open");
-    menu.setAttribute("aria-expanded", "false");
+    menu?.setAttribute("aria-expanded", "false");
   }),
 );
 const notes = {
