@@ -947,3 +947,16 @@ header > .nav-cta { flex: 0 0 auto; white-space: nowrap; }
 .hero-copy .hero-statement + .button { margin-top: 30px; }
 @media (max-width: 950px) { header { height: auto; min-height: 98px; flex-wrap: wrap; gap: 18px 28px; } header > nav { flex-wrap: wrap; justify-content: flex-end; } }
 @media (max-width: 650px) { header > nav { position: static; display: flex; width: 100%; margin-left: 0; padding: 0; background: transparent; border: 0; gap: 12px 20px; justify-content: flex-start; } .hero-copy h1.hero-statement { font-size: clamp(2.1rem, 7.5vw, 3rem); max-width: 22ch; } }
+
+/* Brand-arrow carousel navigation with an integrated caption. */
+.carousel-arrow-controls { display: flex; gap: 16px; align-items: center; margin-top: 18px; }
+.carousel-arrow-controls > button { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 48px; padding: 8px; border: 0; border-radius: 0; background: transparent; color: var(--ink); }
+.carousel-arrow-controls > button:hover { background: transparent; color: #32620E; }
+.carousel-arrow-controls button svg { display: block; width: 26px; height: 30px; }
+.carousel-arrow-controls .carousel-prev svg { transform: rotate(-90deg); }
+.carousel-arrow-controls .carousel-next svg { transform: rotate(90deg); }
+.carousel-rule { height: 1px; background: var(--ink); opacity: .5; flex: 1 1 0; }
+.carousel-arrow-controls .carousel-caption { flex: 0 1 auto; margin: 0; text-align: center; font-size: .875rem; color: var(--ink); line-height: 1.4; }
+.hero-carousel > .carousel-dots { justify-content: center; margin-top: 2px; }
+.hero-copy h1.hero-statement { max-width: none; }
+@media (max-width: 500px) { .carousel-arrow-controls { gap: 8px; } .carousel-arrow-controls .carousel-caption { font-size: .8125rem; } }
