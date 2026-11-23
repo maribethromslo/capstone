@@ -973,3 +973,66 @@ header > .nav-cta { flex: 0 0 auto; white-space: nowrap; }
 
 
 
+
+
+/* Supplied badge artwork and topographic field-guide imagery */
+.statement.identity-badges {
+  background: #fff;
+  padding: 28px;
+  text-align: center;
+  align-items: center;
+}
+.identity-badges > p {
+  font: italic clamp(28px, 3vw, 40px)/1.1 Georgia, serif;
+  margin: 12px 0 18px;
+}
+.identity-badges > p br { display: none; }
+.identity-badges .small { letter-spacing: .14em; }
+.identity-badges .tiny { margin-top: 20px; font-size: 10px; letter-spacing: .1em; }
+.identity-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 20px;
+  width: 100%;
+  max-width: 380px;
+}
+.identity-badge {
+  display: block;
+  aspect-ratio: 512 / 570;
+  background-image: url('assets/context-badges.png');
+  background-size: 400% auto;
+  background-repeat: no-repeat;
+}
+.badge-1 { background-position: 0 0; }
+.badge-2 { background-position: 33.333333% 0; }
+.badge-3 { background-position: 66.666667% 0; }
+.badge-4 { background-position: 100% 0; }
+.landscape.map-panel {
+  min-height: 380px;
+  padding: 36px;
+  background: #7a9e7e url('assets/topographic-map.png') center / cover;
+  justify-content: center;
+  align-items: center;
+}
+.map-panel-label {
+  background: #faf7f0;
+  color: #193b30;
+  padding: 28px 30px;
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
+  border: 1px solid #193b30;
+  box-shadow: 6px 6px 0 #32620e;
+}
+.map-panel-label > span {
+  display: block;
+  font: 900 clamp(23px, 2.3vw, 30px)/1.18 'Trebuchet MS', sans-serif;
+  letter-spacing: .025em;
+}
+.map-panel-label > p { margin: 24px 0 0; font-size: 13px; }
+@media (max-width: 650px) {
+  .statement.identity-badges { padding: 24px 18px; }
+  .identity-badge-grid { gap: 12px; }
+  .landscape.map-panel { min-height: 330px; padding: 28px; }
+  .map-panel-label { padding: 24px; }
+}
