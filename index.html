@@ -35,6 +35,27 @@
   .why, .section.context-triptych { padding-inline: 24px; }
 }
 </style>
+<style>
+
+/* Research aligns with the full-width context row inside the site margins. */
+.section#research {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: max(3vw, 24px);
+}
+#research .intro { max-width: 70ch; }
+#research .research-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; }
+#research .research-grid article { padding: 0; min-width: 0; overflow: hidden; }
+#research .research-image { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+#research .research-card-copy { padding: 24px; }
+#research .research-card-copy h3 { font-size: clamp(19px,1.7vw,25px); line-height: 1.25; margin: 16px 0 14px; }
+#research .research-card-copy p { font-size: 15px; line-height: 1.6; }
+@media(max-width:950px) { #research .research-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:650px) { .section#research { padding-inline: 24px; } }
+@media(max-width:480px) { #research .research-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -154,26 +175,36 @@
         </p>
         <div class="research-grid">
           <article>
-            <span class="number">01</span>
-            <h3>Merit badges<br />& scouting</h3>
-            <p>How symbols make experiences visible.</p>
+            <img class="research-image" src="assets/research-scouting.png" alt="Girl Scout uniform and sash covered in merit badges." loading="lazy" />
+            <div class="research-card-copy">
+              <span class="number">01</span>
+              <h3>Merit badges &amp; scouting</h3>
+              <p>How symbols make experiences visible.</p>
+            </div>
           </article>
           <article>
-            <span class="number">02</span>
-            <h3>National parks<br />& field guides</h3>
-            <p>A visual language for navigating uncertainty.</p>
+            <img class="research-image" src="assets/research-healthcare.jpg" alt="Hospital monitoring equipment and an IV bag." loading="lazy" />
+            <div class="research-card-copy">
+              <span class="number">02</span>
+              <h3>Healthcare &amp; patient experience</h3>
+              <p>Identity and recognition beyond a diagnosis.</p>
+            </div>
           </article>
           <article>
-            <span class="number">03</span>
-            <h3>Healthcare<br />& patient experience</h3>
-            <p>Identity and recognition beyond a diagnosis.</p>
+            <img class="research-image" src="assets/research-national-parks.png" alt="National Park Service arrowhead patch on a ranger’s uniform." loading="lazy" />
+            <div class="research-card-copy">
+              <span class="number">03</span>
+              <h3>National Parks &amp; field guides</h3>
+              <p>A visual language for navigating uncertainty.</p>
+            </div>
           </article>
           <article>
-            <span class="number">04</span>
-            <h3>Conversations<br />& community</h3>
-            <p>
-              Feedback from care professionals and people with lived experience.
-            </p>
+            <img class="research-image" src="assets/research-community.jpg" alt="A healthcare professional resting a hand on a patient’s hand." loading="lazy" />
+            <div class="research-card-copy">
+              <span class="number">04</span>
+              <h3>Conversations &amp; Community</h3>
+              <p>Feedback from care professionals and people with lived experience.</p>
+            </div>
           </article>
         </div>
       </section>
