@@ -1105,3 +1105,9 @@ header > .nav-cta { flex: 0 0 auto; white-space: nowrap; }
   .context-triptych .landscape.map-panel { min-height: 340px; }
   .context-triptych .map-panel-label > span { font-size: 28px; }
 }
+
+/* Outer margins: 6% per side on desktop, unchanged on phones. */
+body { width: auto; margin-inline: 6%; }
+@media (max-width: 650px) {
+  body { margin-inline: 14px; }
+}
