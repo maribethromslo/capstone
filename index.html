@@ -9,7 +9,18 @@
     />
     <title>Badges of Honor · Maribeth Romslo</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+  <style>
+
+.context-triptych { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; gap:32px; }
+.context-triptych > div { min-width:0; }
+.context-triptych h2 { font-size:clamp(28px,2.6vw,42px); line-height:1.1; margin-bottom:24px; }
+.context-triptych > div > p:not(.eyebrow) { font-size:16px; line-height:1.65; }
+.context-triptych .landscape.map-panel { width:100%; min-height:430px; height:100%; box-sizing:border-box; padding:22px; }
+.context-triptych .map-panel-label { padding:24px 18px; }
+.context-triptych .map-panel-label > span { font-size:clamp(20px,1.9vw,28px); line-height:1.2; }
+@media(max-width:650px) { .context-triptych { grid-template-columns:1fr; gap:32px; } .context-triptych .landscape.map-panel { min-height:330px; } }
+</style>
+</head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
     <header>
