@@ -1066,3 +1066,42 @@ header > .nav-cta { flex: 0 0 auto; white-space: nowrap; }
   .exact-badge-grid > img:nth-child(4) { grid-column: auto; }
   .exact-badge-grid > img:nth-child(5) { grid-column: 1 / -1; width: calc(50% - 6px); justify-self: center; }
 }
+
+
+/* One row: problem, topographic metaphor, opportunity. */
+.context-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(24px, 3vw, 48px);
+}
+.context-triptych > div { min-width: 0; }
+.context-triptych h2 {
+  font-size: clamp(30px, 2.7vw, 44px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.context-triptych > div > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: none;
+}
+.context-triptych .landscape.map-panel {
+  width: 100%;
+  min-height: 430px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+}
+.context-triptych .map-panel-label { padding: 24px 20px; }
+.context-triptych .map-panel-label > span {
+  font-size: clamp(21px, 2vw, 28px);
+  line-height: 1.2;
+}
+.context-triptych .map-panel-label > p { line-height: 1.5; }
+@media (max-width: 950px) {
+  .context-triptych { grid-template-columns: 1fr; gap: 36px; }
+  .context-triptych h2 { font-size: clamp(32px, 5vw, 44px); }
+  .context-triptych .landscape.map-panel { min-height: 340px; }
+  .context-triptych .map-panel-label > span { font-size: 28px; }
+}
