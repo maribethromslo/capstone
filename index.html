@@ -20,6 +20,21 @@
 .context-triptych .map-panel-label > span { font-size:clamp(20px,1.9vw,28px); line-height:1.2; }
 @media(max-width:650px) { .context-triptych { grid-template-columns:1fr; gap:32px; } .context-triptych .landscape.map-panel { min-height:330px; } }
 </style>
+<style>
+/* Align this row with the comparison panels above. */
+.why,
+.section.context-triptych {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: max(3vw, 24px);
+}
+.section.context-triptych { gap: clamp(28px, 3vw, 60px); }
+@media (max-width: 650px) {
+  .why, .section.context-triptych { padding-inline: 24px; }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
