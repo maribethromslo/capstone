@@ -110,6 +110,39 @@
 #identity .brand-type-board img { display:block; width:100%; height:auto; mix-blend-mode:multiply; }
 @media(max-width:750px) { #identity .identity-mark-type-row { grid-template-columns:1fr; gap:36px; } }
 </style>
+<style>
+
+/* Tighter identity spacing, including the artwork's transparent margins. */
+#identity > .intro { margin-bottom: 18px; }
+#identity .identity-moodboard {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1758 / 850;
+  margin: 18px 0 28px;
+}
+#identity .identity-moodboard img {
+  position: absolute;
+  width: 109.215017%;
+  max-width: none;
+  height: auto;
+  left: -4.83504%;
+  top: -14.82353%;
+}
+#identity .brand-type-section { border:0; border-top:0; padding-top:0; }
+#identity .brand-type-section::before { display:none; }
+.eyebrow { font-size:14px !important; line-height:1.5; letter-spacing:.14em; }
+.tiny, .small, .caption, figcaption, .hero-meta, .hero-note {
+  font-size:14px;
+  line-height:1.5;
+}
+.why-comparison figcaption .eyebrow { font-size:14px !important; }
+.brand-palette code { font-size:14px; }
+@media(max-width:650px) {
+  .eyebrow { font-size:13px !important; }
+  .tiny, .small, .caption, figcaption, .hero-meta, .hero-note { font-size:13px; }
+  #identity .identity-moodboard { margin:16px 0 24px; }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -217,7 +250,7 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">03 / DISCOVERY</p>
-            <h2>Research <span>—</span></h2>
+            <h2>Research &amp; Inspiration <span>—</span></h2>
           </div>
           <a class="text-link" href="bibliography.html"
             >Bibliography &amp; citations</a
