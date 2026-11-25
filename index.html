@@ -314,6 +314,22 @@ main > .why { padding-top:35px; padding-bottom:35px; }
 footer .footer-email { display:inline-block; margin-top:8px; font-size:16px; letter-spacing:normal; text-transform:none; text-decoration:underline; text-underline-offset:4px; }
 @media(max-width:750px) { .next-steps-grid { grid-template-columns:1fr; } }
 </style>
+<style>
+/* Full-width opening carousel with project context above and headline below. */
+main > .hero { display:flex; flex-direction:column; align-items:stretch; gap:28px; width:100%; max-width:none; box-sizing:border-box; padding:40px max(3vw,24px); }
+.hero > .hero-copy { display:flex; flex-direction:column; align-items:flex-start; gap:14px; width:100%; max-width:none; padding:0; }
+.hero > .hero-copy .eyebrow { margin:0; }
+.hero > .hero-copy .meta { margin:0; font-size:16px; line-height:1.5; }
+.hero > .hero-copy .button { margin:4px 0 0; }
+.hero > .hero-carousel { width:100%; max-width:none; align-self:stretch; margin:0; }
+.hero > .hero-carousel .carousel-stage { width:100%; aspect-ratio:16/9; height:auto; }
+.hero > h1.hero-statement { width:100%; max-width:none; margin:8px 0 0; font-family:Georgia,'Times New Roman',serif; font-size:clamp(38px,5vw,88px); font-weight:400; line-height:1.1; letter-spacing:-.035em; }
+@media(max-width:650px) {
+ main > .hero { padding:28px 20px; gap:22px; }
+ .hero > .hero-copy .meta { font-size:14px; }
+ .hero > h1.hero-statement { font-size:clamp(34px,8vw,48px); }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -332,10 +348,8 @@ footer .footer-email { display:inline-block; margin-top:8px; font-size:16px; let
       <section class="hero" id="overview">
         <div class="hero-copy">
           <p class="eyebrow">MARIBETH ROMSLO · MCAD CAPSTONE · 2026</p>
-          <p class="hero-project-name">Badges of Honor</p>
-          <h1 class="hero-statement">Recognition for navigating the wilderness of<br class="hero-line-break" /> chronic illness.</h1>
-          <a class="button dark" href="#section-01">Explore the project ↓</a>
           <div class="meta">Brand identity / Prototyping / Experiential design</div>
+          <a class="button dark" href="#section-01">Explore the project ↓</a>
         </div>
         <div class="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Badges of Honor project highlights" tabindex="0">
           <div class="carousel-stage">
@@ -355,6 +369,7 @@ footer .footer-email { display:inline-block; margin-top:8px; font-size:16px; let
               <button type="button" data-slide="2" aria-label="Show companion website" aria-current="false"></button>
             </div>
         </div>
+        <h1 class="hero-statement">Recognition for navigating the wilderness of chronic illness.</h1>
       </section>
       <section id="why" class="why">
         <div>
