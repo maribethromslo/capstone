@@ -264,6 +264,47 @@ main > .why { padding-top:35px; padding-bottom:35px; }
  .process-step-detail .detail-copy { font-size:17px; }
 }
 </style>
+<style>
+/* Feedback connects the evidence to practical design priorities. */
+.feedback-context { display:grid; grid-template-columns:1fr 1.25fr 1.5fr; gap:24px; margin:24px 0; padding:20px 0; border-top:1px solid #cdd4c4; border-bottom:1px solid #cdd4c4; }
+.feedback-context p { margin:0; }
+.feedback-context strong { display:block; font-size:22px; }
+.feedback-context span { display:block; font-size:15px; margin-top:6px; }
+.feedback-context .feedback-scope { font-size:15px; line-height:1.5; align-self:center; }
+.feedback-instruction { font-size:15px; margin:0 0 12px; }
+.feedback-finding { border-bottom:1px solid #cdd4c4; }
+.feedback-finding > summary { display:grid; grid-template-columns:36px 1fr 24px; align-items:center; gap:18px; padding:18px 12px; cursor:pointer; list-style:none; }
+.feedback-finding > summary::-webkit-details-marker { display:none; }
+.feedback-finding > summary:hover,.feedback-finding[open] > summary { background:#e9ecdf; }
+.feedback-finding > summary:focus-visible,.feedback-reviewers > summary:focus-visible { outline:2px solid #193b30; outline-offset:3px; }
+.finding-number { font:italic 25px Georgia,serif; color:#637b5d; }
+.feedback-finding summary strong { font-size:22px; line-height:1.25; }
+.finding-teaser { display:block; font-size:16px; margin-top:5px; }
+.finding-toggle::before { content:'+'; font-size:28px; }
+.feedback-finding[open] .finding-toggle::before { content:'−'; }
+.finding-content { display:grid; grid-template-columns:1.2fr 1fr; gap:clamp(24px,4vw,64px); padding:24px 24px 28px 66px; }
+.finding-content p { font-size:17px; line-height:1.6; }
+.finding-content .finding-label { font-size:14px; font-weight:bold; letter-spacing:.06em; margin:0 0 16px; }
+.finding-quote { margin:0 0 18px; padding:0; border:0; }
+.finding-quote blockquote { font:normal 26px/1.3 Georgia,serif; margin:0 0 12px; }
+.finding-quote figcaption { font-size:14px; }
+.finding-response { background:#e9ecdf; padding:22px; align-self:start; }
+.finding-response h3 { font:normal 25px/1.2 Georgia,serif; margin:0 0 12px; }
+.finding-response p:last-child { margin-bottom:0; }
+.feedback-reviewers { margin-top:22px; font-size:16px; }
+.feedback-reviewers > summary { cursor:pointer; font-weight:bold; padding:10px 0; }
+.feedback-reviewers > div { max-width:90ch; padding:10px 0; }
+.feedback-reviewers li { margin-bottom:10px; }
+@media(max-width:750px) {
+ .feedback-context { grid-template-columns:1fr 1fr; gap:18px; }
+ .feedback-context .feedback-scope { grid-column:1/-1; }
+ .finding-content { grid-template-columns:1fr; padding:20px 12px; gap:18px; }
+ .feedback-finding > summary { gap:10px; grid-template-columns:28px 1fr 20px; padding:16px 6px; }
+ .feedback-finding summary strong { font-size:20px; }
+ .finding-teaser { font-size:15px; }
+ .feedback-context strong { font-size:20px; }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -574,41 +615,19 @@ main > .why { padding-top:35px; padding-bottom:35px; }
       </section>
       <section class="section feedback" id="feedback">
         <p class="eyebrow">07 / EXTERNAL REVIEW</p>
-        <h2>Feedback</h2>
-        <p class="intro">
-          A conversation with Mayo care professionals helped clarify what this
-          system could offer.
-        </p>
-        <div class="quotes">
-          <figure>
-            <blockquote>“The colors are very calming.”</blockquote>
-            <figcaption>
-              Erin E. Taylor<span
-                >Social worker · Outpatient palliative care</span
-              >
-            </figcaption>
-          </figure>
-          <figure>
-            <blockquote>“The energy component is a real factor.”</blockquote>
-            <figcaption>
-              Jordan C. Karow<span
-                >Nurse practitioner · Inpatient palliative care</span
-              >
-            </figcaption>
-          </figure>
-          <figure>
-            <blockquote>
-              “Things that matter and that you want your team to know will make
-              you feel seen and heard.”
-            </blockquote>
-            <figcaption>
-              Regan N. Trexel<span>Certified Child Life Specialist</span>
-            </figcaption>
-          </figure>
+        <h2>Feedback from the field</h2>
+        <p class="intro">Recognition matters. So does the freedom to define it. Community reviewers and Mayo care professionals helped surface what resonates, where the system needs more care, and what comes next.</p>
+        <div class="feedback-context"><p><strong>8 reviewers</strong><span>Feedback form · November 2026</span></p><p><strong>4 Mayo care professionals</strong><span>Group conversation · October 9, 2026</span></p><p class="feedback-scope">Qualitative feedback to guide design decisions, not a representative study of the chronic illness community.</p></div>
+        <p class="feedback-instruction">Open a finding to explore the feedback + design implications.</p>
+        <div class="feedback-findings">
+          <details class="feedback-finding" name="field-findings" open><summary><span class="finding-number">01</span><span><strong>The metaphor works</strong><span class="finding-teaser">Keep the language of navigating, resting, and adapting.</span></span><span class="finding-toggle" aria-hidden="true"></span></summary><div class="finding-content"><div><p class="finding-label">WHAT WE HEARD · Across both reviews</p><figure class="finding-quote"><blockquote>“I love this reframe of navigating instead of constantly trying to overcome or manage.”</blockquote><figcaption>Betsy · Feedback from the Field</figcaption></figure><p>The wilderness metaphor felt playful, nostalgic, and emotionally validating. Reviewers connected it to uncertainty, finding direction, and belonging.</p></div><div class="finding-response"><p class="finding-label">CARRY FORWARD</p><h3>What this means for the design</h3><p>Keep the wilderness vocabulary at the center of the system, with room for detours and rest rather than a single path toward recovery.</p></div></div></details>
+          <details class="feedback-finding" name="field-findings"><summary><span class="finding-number">02</span><span><strong>Recognition without pressure</strong><span class="finding-teaser">Acknowledge experience, not a standard of achievement.</span></span><span class="finding-toggle" aria-hidden="true"></span></summary><div class="finding-content"><div><p class="finding-label">WHAT WE HEARD · Community reviewers</p><p>Regina, who lives with fibromyalgia, questioned what it means to earn a badge when getting out of bed can feel impossible. Carole valued milestones that were not tied to healing or recovery.</p></div><div class="finding-response"><p class="finding-label">LANGUAGE PRIORITY</p><h3>What this means for the design</h3><p>Clarify that recognition does not need to be earned through bravery, productivity, or improvement. Let people decide which experiences deserve acknowledgment.</p></div></div></details>
+          <details class="feedback-finding" name="field-findings"><summary><span class="finding-number">03</span><span><strong>Choice includes privacy</strong><span class="finding-teaser">Let people decide what to share, and with whom.</span></span><span class="finding-toggle" aria-hidden="true"></span></summary><div class="finding-content"><div><p class="finding-label">WHAT WE HEARD · Across both reviews</p><p>Betsy described a mental illness badge as meaningful, while questioning whether she would want to display it publicly. The Mayo review also identified value in symbols whose meaning the wearer can choose to explain.</p></div><div class="finding-response"><p class="finding-label">DESIGN PRIORITY</p><h3>What this means for the design</h3><p>Offer both explicit and symbolic messages, alongside private reflection in the journal. Make public disclosure a choice rather than a condition of participation.</p></div></div></details>
+          <details class="feedback-finding" name="field-findings"><summary><span class="finding-number">04</span><span><strong>Make the first step easy</strong><span class="finding-teaser">Design for people with limited energy.</span></span><span class="finding-toggle" aria-hidden="true"></span></summary><div class="finding-content"><div><p class="finding-label">WHAT WE HEARD · Mayo care team</p><figure class="finding-quote"><blockquote>“Something that maybe doesn’t feel as overwhelming because the energy component is a real factor.”</blockquote><figcaption>Jordan C. Karow · Inpatient palliative care</figcaption></figure><p>The care team saw value in tangible storytelling, but emphasized an easy starting point for the field journal. Patients should be able to define what matters to them.</p></div><div class="finding-response"><p class="finding-label">NEXT ITERATION</p><h3>What this means for the design</h3><p>Test a clear, low-effort entry point and optional prompts so someone can begin without feeling responsible for completing an entire journal.</p></div></div></details>
+          <details class="feedback-finding" name="field-findings"><summary><span class="finding-number">05</span><span><strong>Belonging needs access</strong><span class="finding-teaser">Explain how participation works beyond the presentation.</span></span><span class="finding-toggle" aria-hidden="true"></span></summary><div class="finding-content"><div><p class="finding-label">WHAT WE HEARD · Community reviewers</p><p>Reviewers asked how people obtain badges, what they cost, and whether gifting, subsidies, hospitals, or community organizations could help. They also suggested caregiver experiences, more conditions, LGBTQ identities, and multiple languages.</p></div><div class="finding-response"><p class="finding-label">QUESTIONS TO RESOLVE</p><h3>What this means for the design</h3><p>Map the discovery-to-participation journey. Explore affordability, gifting, distribution partners, and broader representation before defining a rollout.</p></div></div></details>
+          <details class="feedback-finding" name="field-findings"><summary><span class="finding-number">06</span><span><strong>Keep the warmth, refine the system</strong><span class="finding-teaser">Preserve the visual appeal while strengthening consistency.</span></span><span class="finding-toggle" aria-hidden="true"></span></summary><div class="finding-content"><div><p class="finding-label">WHAT WE HEARD · Across both reviews</p><figure class="finding-quote"><blockquote>“The colors are very calming.”</blockquote><figcaption>Erin E. Taylor · Outpatient palliative care</figcaption></figure><p>The visual direction resonated. Community suggestions included brighter color options, consistency between anatomical and symbolic imagery, reconsidering the five-senses sticker, and alphabetizing condition-specific badges.</p></div><div class="finding-response"><p class="finding-label">REFINEMENT PRIORITIES</p><h3>What this means for the design</h3><p>Review the badge collection as a whole, test alternate color options, and improve browsing so the expanding collection stays cohesive and easy to navigate.</p></div></div></details>
         </div>
-        <button class="text-link" data-dialog="feedback">
-          How the feedback shaped the work ↗
-        </button>
+        <details class="feedback-reviewers"><summary>Who contributed + how I gathered feedback</summary><div><p>The community round shared the capstone presentation through a Google Form. Eight reviewers responded to the concept, visual identity, language, badges, field journal, and potential participation.</p><p>The Mayo care team reviewed the Progress Platform before a group Zoom conversation on October 9, 2026:</p><ul><li><strong>Regan N. Trexel, CCLS</strong> · Certified Child Life Specialist, pediatric hematology/oncology</li><li><strong>Jordan C. Karow, APRN, C.N.P., D.N.P.</strong> · Nurse practitioner, inpatient palliative care</li><li><strong>Melissa K. Smith, APRN, C.N.P., M.S.N.</strong> · Nurse practitioner, pediatric palliative care</li><li><strong>Erin E. Taylor, M.S.W., L.I.C.S.W.</strong> · Social worker, outpatient palliative care</li></ul><p>These findings are synthesized from my two external-feedback assignments. Design priorities and next steps describe work to carry forward, rather than completed changes.</p></div></details>
       </section>
       <section class="section reflection" id="reflection">
         <div>
