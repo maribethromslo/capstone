@@ -174,6 +174,12 @@
  .journal-page .journal-opening-spread > img { max-height:none; }
 }
 </style>
+<style>
+footer { display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:15px; }
+footer .brand { font-size:18px; }
+footer > p { margin:0 0 0 auto; text-align:right; font-size:14px; line-height:1.6; letter-spacing:.08em; }
+@media(max-width:650px) { footer { flex-wrap:wrap; } footer > p { font-size:13px; } }
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -537,17 +543,14 @@
         <div class="resource-links">
           <a class="button" href="bibliography.html"
             >Bibliography + citations</a
-          ><button class="button" data-dialog="feedback">
-            Care team feedback ↗</button
-          ><button class="button" id="print">Print / Save PDF ↓</button
-          ><a class="button" href="#overview">Back to the beginning ↑</a>
+          ><a class="button" href="https://badgesofhonor.substack.com/" target="_blank" rel="noopener noreferrer">Progress Platform ↗</a><a class="button" href="#overview">Back to the beginning ↑</a>
         </div>
       </section>
     </main>
     <footer>
       <a class="brand" href="#">BADGES OF HONOR</a>
       <p>MARIBETH ROMSLO / MCAD CAPSTONE / FALL 2026</p>
-      <span>Case study in development</span>
+      
     </footer>
     <dialog id="modal">
       <button class="close" aria-label="Close dialog">×</button>

@@ -79,7 +79,7 @@ modal.addEventListener("click", (e) => {
 });
 document
   .querySelector("#print")
-  .addEventListener("click", () => window.print());
+  ?.addEventListener("click", () => window.print());
 
 // Manual navigation gives visitors time to explore each detailed project image.
 const heroCarousel = document.querySelector('.hero-carousel');
