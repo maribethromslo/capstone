@@ -214,6 +214,18 @@ footer > p { margin:0 0 0 auto; text-align:right; font-size:14px; line-height:1.
   .section.project-origin { grid-template-columns:1fr; }
 }
 </style>
+<style>
+/* Halve vertical breathing room around section dividers. */
+main > .section { padding-top:35px; padding-bottom:35px; }
+main > .why { padding-top:35px; padding-bottom:35px; }
+@media(max-width:950px) {
+ main > .section { padding-top:27.5px; padding-bottom:27.5px; }
+}
+@media(max-width:650px) {
+ main > .section { padding-top:21.5px; padding-bottom:21.5px; }
+ main > .why { padding-top:20px; padding-bottom:20px; }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
