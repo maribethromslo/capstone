@@ -226,6 +226,16 @@ main > .why { padding-top:35px; padding-bottom:35px; }
  main > .why { padding-top:20px; padding-bottom:20px; }
 }
 </style>
+<style>
+/* Field journal gallery at 80% of its previous size. */
+.journal-flip-gallery { width:80%; margin-left:auto; margin-right:auto; }
+.journal-page img { height:clamp(224px,40vw,544px); }
+.journal-opening-spread { max-width:720px; }
+.journal-page .journal-opening-spread > img { max-height:544px; }
+@media(max-width:650px) {
+ .journal-page .journal-opening-spread > img { max-height:none; }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -467,7 +477,6 @@ main > .why { padding-top:35px; padding-bottom:35px; }
                 journey.
               </p>
             </div>
-            <a class="text-link" href="#journal-gallery">Explore the pages ↓</a>
           </div>
 <div id="journal-gallery" class="journal-flip-gallery" role="region" aria-roledescription="carousel" aria-label="Field journal pages" tabindex="0">
 <div class="journal-pages"><figure class="journal-page"><img src="assets/FieldJournal00Cover.png" alt="Badges of Honor Field Guide cover with mountains, trees, a river, and a golden sun" loading="eager" /></figure>
