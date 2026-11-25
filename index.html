@@ -155,6 +155,25 @@
 .journal-page-controls { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; }
 .journal-status { font-size:16px; }
 </style>
+<style>
+/* Reduce the gap between the identity row and the palettes. */
+#identity .identity-mark-type-row { margin-bottom:20px; }
+#identity .identity-mark-type-row + .brand-palette-section { margin-top:0; padding-top:0; }
+/* Inside front cover on the left, ownership page on the right. */
+.journal-opening-spread {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  width:min(100%,900px);
+  margin-inline:auto;
+  align-items:stretch;
+  box-shadow:0 5px 18px #193b3020;
+}
+.journal-inside-cover { background:#193b30; box-shadow:inset -8px 0 14px #00000018; }
+.journal-page .journal-opening-spread > img { width:100%; height:auto; max-height:680px; object-fit:contain; background:#faf7f0; }
+@media(max-width:650px) {
+ .journal-page .journal-opening-spread > img { max-height:none; }
+}
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -413,13 +432,14 @@
             <a class="text-link" href="#journal-gallery">Explore the pages ↓</a>
           </div>
 <div id="journal-gallery" class="journal-flip-gallery" role="region" aria-roledescription="carousel" aria-label="Field journal pages" tabindex="0">
-<div class="journal-pages"><figure class="journal-page"><img src="assets/ownership.webp" alt="This field journal belongs to you" loading="eager" /><figcaption>This field journal belongs to you</figcaption></figure>
+<div class="journal-pages"><figure class="journal-page"><img src="assets/FieldJournal00Cover.png" alt="Badges of Honor Field Guide cover with mountains, trees, a river, and a golden sun" loading="eager" /><figcaption>Field Guide cover</figcaption></figure>
+<figure class="journal-page" hidden><div class="journal-opening-spread"><div class="journal-inside-cover" role="img" aria-label="Plain green inside front cover"></div><img src="assets/ownership.webp" alt="This field journal belongs to you, on the right-hand page" loading="lazy" /></div><figcaption>This field journal belongs to you</figcaption></figure>
 <figure class="journal-page" hidden><img src="assets/daily.webp" alt="Today’s journey" loading="lazy" /><figcaption>Today’s journey</figcaption></figure>
 <figure class="journal-page" hidden><img src="assets/milestones.webp" alt="Milestones that matter" loading="lazy" /><figcaption>Milestones that matter</figcaption></figure>
 <figure class="journal-page" hidden><img src="assets/support.webp" alt="My support crew" loading="lazy" /><figcaption>My support crew</figcaption></figure>
 <figure class="journal-page" hidden><img src="assets/visits.webp" alt="Before + after a visit" loading="lazy" /><figcaption>Before + after a visit</figcaption></figure>
 <figure class="journal-page" hidden><img src="assets/stories.webp" alt="The story behind my badge" loading="lazy" /><figcaption>The story behind my badge</figcaption></figure></div>
-<div class="journal-page-controls"><button type="button" class="button secondary journal-prev" aria-label="Previous journal page">← Previous</button><span class="journal-status" aria-live="polite">1 / 6</span><button type="button" class="button secondary journal-next" aria-label="Next journal page">Next →</button></div>
+<div class="journal-page-controls"><button type="button" class="button secondary journal-prev" aria-label="Previous journal page">← Previous</button><span class="journal-status" aria-live="polite">1 / 7</span><button type="button" class="button secondary journal-next" aria-label="Next journal page">Next →</button></div>
 </div>
         </div>
       </section>
