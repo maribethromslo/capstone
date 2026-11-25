@@ -349,6 +349,11 @@ main > .hero { display:flex; flex-direction:column; align-items:stretch; gap:28p
 @media(min-width:951px) { .hero > h1.hero-statement { white-space:nowrap; } }
 @media(max-width:650px) { .hero > h1.hero-statement { font-size:clamp(26px,6vw,36px); white-space:normal; } }
 </style>
+<style>
+/* Match the Context label's space so the two headings align. */
+.context-triptych .opportunity-alignment-spacer { visibility:hidden; }
+@media(max-width:650px) { .context-triptych .opportunity-alignment-spacer { display:none; } }
+</style>
 </head>
   <body>
     <a class="skip" href="#overview">Skip to content</a>
@@ -453,7 +458,7 @@ main > .hero { display:flex; flex-direction:column; align-items:stretch; gap:28p
           </div>
         </div>
         <div>
-          
+          <p class="eyebrow opportunity-alignment-spacer" aria-hidden="true">&nbsp;</p>
           <h2>The opportunity</h2>
           <p>
             What if healthcare borrowed from the language of scouting, national
